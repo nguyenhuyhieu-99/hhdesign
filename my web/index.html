@@ -1,0 +1,1285 @@
+﻿<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>Thiết kế quảng cáo - H-Design</TITLE>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<style>
+			/* CSS goes here, at the top of the page */	
+			@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+			@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+			h1, h2, h4, h5, h6 {
+				font-family: 'PT Sans', 'Helvetica', 'Arial';;
+			}
+
+			html, body {
+				margin: 0;
+				padding: 0;
+				font-family: 'PT Serif', 'Helvetica', 'Arial';
+			}
+			#top-bar {
+				width: 100%;
+				background: #F1F1F1; /* light gray */
+				border-bottom: 1px solid #D4D4D4; /* dark gray "underline" */
+				height: 25px;
+			}
+			.normal-wrapper {
+				width: 900px;
+				margin: 0 auto;
+				padding: 15px 40px;
+				overflow: auto;
+			}
+			.logo-icon {
+				color: #000000;
+				font-size: 60pt;
+				float: left;
+			}
+			h1 {
+				float: left;
+				margin: 21px 0 0 25px;
+			}
+			#navbar {
+			    list-style-type: none; /* remove bullet points */
+			    margin: 29px 0 0 0;
+			    padding: 0;
+			    float: right;
+			    font-size: 16pt;
+			}
+			#navbar li {
+			    display: inline; /* make items horizontal */
+			}
+			#navbar li a:link, #navbar li a:visited, #navbar li a:active { 
+				text-decoration: none; /* remove underline */
+				color: #FFFFFF;
+				padding: 0 16px 0 10px; /* space links apart */
+				margin: 0;
+				border-right: 2px solid #B4B4B4; /* divider */
+			}
+			#navbar li a:link.last-link {
+				/* remove divider */
+				border-right: 0px;
+			}
+			#navbar li a:hover {
+				/* change color on hover (mouseover) */
+				color: #8B0204;
+			}
+			#top-color-splash {
+				width: 100%;
+				height: 4px;
+				background: #8B0204;
+			}
+			.one-third {
+				width: 40%;
+				float: left;
+				box-sizing: border-box; /* ensure padding and borders do not increase the size */
+				margin-top: 20px;
+			}
+			.two-third {
+				width: 60%;
+				float: left;
+				box-sizing: border-box; /* ensure padding and borders do not increase the size */
+				padding-left: 40px;
+				text-align: right;
+				margin-top: 20px;
+			}
+			.featured-image {
+				max-width: 500px; /* reduce image size while maintaining aspect ratio */
+			}
+			.no-margin-top {
+				margin-top: 0; /* remove margin on things like headers */
+			}
+			#quote-area {
+				background: #363636;
+				text-align: center;
+				padding: 15px 0;
+			}
+			h3 {
+				font-weight: normal;
+				font-size: 20pt;
+				margin-top: 0px;
+				text-shadow: -1px -1px white, 1px 1px #363636;
+			}
+			h4 {
+				font-weight: normal;
+				font-size: 16pt;
+				margin-bottom: 0;
+				text-shadow: 1pt 1pt white, -1pt -1pt #363636;
+			}
+			.icon-outer {
+				box-sizing: border-box; /* ensure padding and borders do not increase the size */
+				float: left;
+				width: 33.33%;
+				padding: 25px;
+				margin: 0;
+				text-align: center;
+			}
+			.icon-circle {
+				background: #EEEEEE;
+				color: #8B0204; 
+				width: 200px;
+				height: 200px;
+				border-radius: 200px; /* make rounded corners */
+				margin: 0 auto;
+				border: 2px solid #D6D6D6;
+				box-sizing: border-box; /* ensure padding and borders do not increase the size */
+				font-size: 75pt;
+				padding: 30px 0 0 0;
+				cursor: pointer;
+			}
+			.icon-circle:hover {
+				/* change color on hover (mouseover) */
+				color: #FFFFFF;
+				background: #000000;
+			}
+			h5 {
+				margin: 15px 0 10px 0;
+				font-size: 20pt;
+				color: #E5E5E5;
+				text-shadow: black 1px 1px 2px;
+				text-align: center;
+			}
+			h5:hover {
+			color: black;
+			}
+			b {
+			   font-weight: normal;
+				font-size: 20pt;
+				margin-top: 0px;
+				color: #FFFFFF;
+				text-shadow: black 1px 1px 2px;
+				text-align: center;
+			}
+			h2 {
+			color: #8B0204;
+			text-shadow: black 1px 1px 2px;
+			}
+			a {
+			color: #8B0204;
+			}
+			p {
+			color: black;
+			}
+			p:hover {
+			color: white;
+			}
+			#footer {
+				width: 100%;
+				background: #F1F1F1; /* light gray */
+				border-top: 1px solid #D4D4D4; /* dark gray "topline" */
+				height: 150px;
+			}
+			.hidden {
+				display: none;
+			}
+		</style>
+
+<style>
+.box{
+width: 1348px;
+height: 140px;
+background-image: url('ban/transparent.png');
+background-size:100% 100%;
+}
+.box1{
+width: 877px;
+height: 620px;
+margin: 10px;
+border: 5px solid white;
+background-image: url('kt kn kn/transparent.png');
+background-size:100% 100%;
+float:center;
+}
+.box2{
+width: 1348px;
+height: 750px;
+background-color: white;
+background-size:100% 100%;
+-webkit-transition-property: background, border;
+-moz-transition-property: background, border;
+-o-transition-property: background, border;
+transition-property: background, border;
+-webkit-transition-duration: .2s, 1s;
+-moz-transition-duration: .2s, 1s;
+-o-transition-duration: .2s, 1s;
+transition-duration: .2s, 1s;
+-webkit-transition-timing-function: linear;
+-moz-transition-timing-function: linear;
+-o-transition-timing-function: linear;
+transition-timing-function: linear;
+float:left;
+}
+.box2:hover {
+background: black;
+}
+.box3{
+width: 1348px;
+height: 355px;
+background-color: white;
+background-size:100% 100%;
+float:left;
+}
+.box4{
+width: 1024px;
+height: 355px;
+border: 5px solid white;
+background-image: url('1/transparent.png');
+background-size:100% 100%;
+float:left;
+}
+.box5{
+width: 500px;
+height: 50px;
+margin: 10px;
+border: 5px solid #8B0204;
+background-color: black;
+background-size:100% 100%;
+-webkit-transition-property: background, border;
+-moz-transition-property: background, border;
+-o-transition-property: background, border;
+transition-property: background, border;
+-webkit-transition-duration: .2s, 1s;
+-moz-transition-duration: .2s, 1s;
+-o-transition-duration: .2s, 1s;
+transition-duration: .2s, 1s;
+-webkit-transition-timing-function: linear;
+-moz-transition-timing-function: linear;
+-o-transition-timing-function: linear;
+transition-timing-function: linear;
+float:left;
+}
+.box5:hover {
+background: #8B0204;
+border: 5px solid black;
+}
+.box6{
+width: 100%;
+height: 4px;
+background: #8B0204;
+float:left;
+}
+.box7{
+width: 825px;
+height: 600px;
+box-shadow: 5px 5px 2px gray;
+background-image: url('2/transparent.png');
+background-size:100% 100%;
+float:left;
+}
+.box8{
+width: 1010px;
+height: 510px;
+border: 5px solid black;
+background-size:100% 100%;
+float:left;
+}
+.box9{
+width: 877px;
+height: 740px;
+background-color: #8B0204;
+border: 5px solid black; 
+background-size:100% 100%;
+float:left;
+}
+.box10{
+width: 1328px;
+height: 400px;
+margin: 10px;
+background-color: white; 
+background-size:100% 100%;
+float:left;
+}
+.box11{
+width: 600px;
+height: 500px; 
+background-size:100% 100%;
+border: 5px solid black;
+}
+.box12{
+width: 825px;
+height: 464px; 
+background-size:100% 100%;
+background-image: url('16/transparent.png');
+box-shadow: 5px 5px 2px gray;
+}
+.box13{
+width: 1050px;
+height: 320px;
+border: 5px solid black;
+background-size:100% 100%;
+}
+</style>
+<style>
+.example5 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example5 h2 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: left;
+ /* Apply animation to this element */	
+ -moz-animation: example5 5s linear infinite alternate;
+ -webkit-animation: example5 5s linear infinite alternate;
+ animation: example5 5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example5 {
+ 0%   { -moz-transform: translateX(70%); }
+ 100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes example5 {
+ 0%   { -webkit-transform: translateX(70%); }
+ 100% { -webkit-transform: translateX(0%); }
+}
+@keyframes example5 {
+ 0%   { 
+ -moz-transform: translateX(70%); /* Firefox bug fix */
+ -webkit-transform: translateX(70%); /* Firefox bug fix */
+ transform: translateX(70%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(0%); /* Firefox bug fix */
+ -webkit-transform: translateX(0%); /* Firefox bug fix */
+ transform: translateX(0%); 
+ }
+}
+</style>
+<style>
+.example2 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example2 b {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(-100%);
+ -webkit-transform:translateX(-100%);	
+ transform:translateX(-100%);
+ /* Apply animation to this element */	
+ -moz-animation: example2 15s linear infinite;
+ -webkit-animation: example2 15s linear infinite;
+ animation: example2 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example2 {
+ 0%   { -moz-transform: translateX(-100%); }
+ 100% { -moz-transform: translateX(100%); }
+}
+@-webkit-keyframes example2 {
+ 0%   { -webkit-transform: translateX(-100%); }
+ 100% { -webkit-transform: translateX(100%); }
+}
+@keyframes example2 {
+ 0%   { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 
+ }
+}
+</style>
+<style>
+.hotline-phone-ring-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+}
+.hotline-phone-ring {
+  position: relative;
+  visibility: visible;
+  background-color: transparent;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  z-index: 11;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transition: visibility .5s;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+.hotline-phone-ring-circle {
+	width: 85px;
+  height: 85px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid #e60808;
+  -webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  transition: all .5s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0.5;
+}
+.hotline-phone-ring-circle-fill {
+	width: 55px;
+  height: 55px;
+  top: 25px;
+  left: 25px;
+  position: absolute;
+  background-color: rgba(230, 8, 8, 0.7);
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all .5s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.hotline-phone-ring-img-circle {
+	background-color: #8B0204;
+	width: 33px;
+  height: 33px;
+  top: 37px;
+  left: 37px;
+  position: absolute;
+  background-size: 20px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotline-phone-ring-img-circle .pps-btn-img {
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotline-phone-ring-img-circle .pps-btn-img img {
+	width: 20px;
+	height: 20px;
+}
+.hotline-bar {
+  position: absolute;
+  background: rgba(230, 8, 8, 0.75);
+  height: 40px;
+  width: 160px;
+  line-height: 40px;
+  border-radius: 3px;
+  padding: 0 10px;
+  background-size: 100%;
+  cursor: pointer;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  z-index: 9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px !important;
+  /* width: 175px !important; */
+  left: 33px;
+  bottom: 37px;
+}
+.hotline-bar > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 50px;
+  display: block;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-family: Arial;
+}
+.hotline-bar > a:hover,
+.hotline-bar > a:active {
+  color: #fff;
+}
+@-webkit-keyframes phonering-alo-circle-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(0.5) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+  30% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    -webkit-opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+}
+@-webkit-keyframes phonering-alo-circle-fill-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes phonering-alo-circle-img-anim {
+  0% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+@media (max-width: 768px) {
+  .hotline-bar {
+    display: none;
+  }
+}
+</style>
+<style>
+.khoi-slide {
+   width: 100%;
+   height: 700px;
+   position: relative;
+}
+img {
+   width: 100%;
+}
+.cac-slide {
+   width: 100%;
+   height: 700px;
+   overflow: hidden;
+}
+.slide {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   opacity: 0;
+   visibility: hidden;
+}
+.slide.active{
+   opacity: 1;
+   visibility: visible;
+}
+.nut-slide span{
+   color: white;
+   font-size: 60px;
+   opacity: 0.6;
+}
+span#btn-prev{
+   position: absolute;
+   top: 30%;
+   left: 0%;
+   z-index: 10;
+   cursor: pointer;
+}
+span#btn-next{
+   position: absolute;
+   top: 30%;
+   right: 0%;
+   z-index: 10;
+   cursor: pointer;
+}
+.nut-slide ul {
+   position: absolute;
+   z-index: 10;
+   width: 100px;
+   bottom: 25%;
+   left: 50%;
+   margin-left: -50px;
+   display: flex;
+   justify-content: space-between;
+}
+.nut-slide ul li {
+   width: 20px;
+   height: 20px;
+   background: white;
+   opacity: 0.6;
+   list-style: none;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: 0.6s;
+}
+.bien-mat-ben-trai{
+   animation: bien-mat-ben-trai 1s forwards;
+}
+@-webkit-keyframes bien-mat-ben-trai{
+   from{
+      transform: translateX(0%);
+   }
+   to{
+      transform: translateX(-100%);
+   }
+}
+.di-vao-ben-phai{
+   animation: di-vao-ben-phai 1s forwards;
+}
+@-webkit-keyframes di-vao-ben-phai{
+   from{
+      transform: translateX(100%);
+   }
+   to{
+      transform: translateX(0%);
+   }
+}
+</style>
+<style>
+/* Add a black background color to the top navigation bar */
+.topnav {
+	width: 100%;
+	height:50px;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  position: fixed;
+  z-index:1;
+}
+.header{
+width:100%;
+height:50px;
+background-color: transparent;}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #8B0204;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #8B0204;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+</style>
+<style>
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<style>
+a:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+</HEAD>
+<BODY>
+<style>.fb-livechat, .fb-widget{display: none}.ctrlq.fb-button, .ctrlq.fb-close{position: fixed; right: 24px; cursor: pointer}.ctrlq.fb-button{z-index: 999; background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxyZWN0IGZpbGw9IiMwMDg0RkYiIGhlaWdodD0iMTI4IiB3aWR0aD0iMTI4Ii8+PC9nPjxwYXRoIGQ9Ik02NCwxNy41MzFjLTI1LjQwNSwwLTQ2LDE5LjI1OS00Niw0My4wMTVjMCwxMy41MTUsNi42NjUsMjUuNTc0LDE3LjA4OSwzMy40NnYxNi40NjIgIGwxNS42OTgtOC43MDdjNC4xODYsMS4xNzEsOC42MjEsMS44LDEzLjIxMywxLjhjMjUuNDA1LDAsNDYtMTkuMjU4LDQ2LTQzLjAxNUMxMTAsMzYuNzksODkuNDA1LDE3LjUzMSw2NCwxNy41MzF6IE02OC44NDUsNzUuMjE0ICBMNTYuOTQ3LDYyLjg1NUwzNC4wMzUsNzUuNTI0bDI1LjEyLTI2LjY1N2wxMS44OTgsMTIuMzU5bDIyLjkxLTEyLjY3TDY4Ljg0NSw3NS4yMTR6IiBmaWxsPSIjRkZGRkZGIiBpZD0iQnViYmxlX1NoYXBlIi8+PC9zdmc+) center no-repeat #0084ff; width: 60px; height: 60px; text-align: center; bottom: 20px; border: 0; outline: 0; border-radius: 60px; -webkit-border-radius: 60px; -moz-border-radius: 60px; -ms-border-radius: 60px; -o-border-radius: 60px; box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16); -webkit-transition: box-shadow .2s ease; background-size: 80%; transition: all .2s ease-in-out}.ctrlq.fb-button:focus, .ctrlq.fb-button:hover{transform: scale(1.1); box-shadow: 0 2px 8px rgba(0, 0, 0, .09), 0 4px 40px rgba(0, 0, 0, .24)}.fb-widget{background: #fff; z-index: 1000; position: fixed; width: 360px; height: 435px; overflow: hidden; opacity: 0; bottom: 0; right: 24px; border-radius: 6px; -o-border-radius: 6px; -webkit-border-radius: 6px; box-shadow: 0 5px 40px rgba(0, 0, 0, .16); -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, .16); -moz-box-shadow: 0 5px 40px rgba(0, 0, 0, .16); -o-box-shadow: 0 5px 40px rgba(0, 0, 0, .16)}.fb-credit{text-align: center; margin-top: 8px}.fb-credit a{transition: none; color: #bec2c9; font-family: Helvetica, Arial, sans-serif; font-size: 12px; text-decoration: none; border: 0; font-weight: 400}.ctrlq.fb-overlay{z-index: 0; position: fixed; height: 100vh; width: 100vw; -webkit-transition: opacity .4s, visibility .4s; transition: opacity .4s, visibility .4s; top: 0; left: 0; background: rgba(0, 0, 0, .05); display: none}.ctrlq.fb-close{z-index: 4; padding: 0 6px; background: #365899; font-weight: 700; font-size: 11px; color: #fff; margin: 8px; border-radius: 3px}.ctrlq.fb-close::after{content: "X"; font-family: sans-serif}.bubble{width: 20px; height: 20px; background: #c00; color: #fff; position: absolute; z-index: 999999999; text-align: center; vertical-align: middle; top: -2px; left: -5px; border-radius: 50%;}.bubble-msg{width: 120px; left: -140px; top: 5px; position: relative; background: rgba(59, 89, 152, .8); color: #fff; padding: 5px 8px; border-radius: 8px; text-align: center; font-size: 13px;}</style><div class="fb-livechat"> <div class="ctrlq fb-overlay"></div><div class="fb-widget"> <div class="ctrlq fb-close"></div><div class="fb-page" data-href="https://www.facebook.com/DesignerNguyenHuyHieu" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false"> </div><div class="fb-credit"> <a href="https://www.facebook.com/DesignerNguyenHuyHieu/" target="_blank">Inbox H-Design</a> </div><div id="fb-root"></div></div><a href="https://m.me/DesignerNguyenHuyHieu" title="Gửi tin nhắn cho H-Design qua Facebook" class="ctrlq fb-button"> <div class="bubble">1</div><div class="bubble-msg">Xin chào, H-Design có thể giúp gì cho bạn?</div></a></div><script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script>jQuery(document).ready(function($){function detectmob(){if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i) ){return true;}else{return false;}}var t={delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button")}; setTimeout(function(){$("div.fb-livechat").fadeIn()}, 8 * t.delay); if(!detectmob()){$(".ctrlq").on("click", function(e){e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({bottom: 0, opacity: 0}, 2 * t.delay, function(){$(this).hide("slow"), t.button.show()})) : t.button.fadeOut("medium", function(){t.widget.stop().show().animate({bottom: "30px", opacity: 1}, 2 * t.delay), t.overlay.fadeIn(t.delay)})})}});</script>
+<div class="topnav">
+<a href="file:///D:/Thiet%20ke%20giao%20dien%20web/my%20web/home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="file:///D:/Thiet%20ke%20giao%20dien%20web/my%20web/cat%20coffee.pdf"><i class="fa fa-fw fa-search"></i> About</a>
+  <a href="file:///D:/Thiet%20ke%20giao%20dien%20web/my%20web/revier.html#intro"><i class="fa fa-fw fa-globe"></i> Reviews</a>
+  <a href="https://www.facebook.com/pg/DesignerNguyenHuyHieu/about/?ref=page_internal"><i class="fa fa-fw fa-user"></i> Contact</a>
+  <a href="https://www.facebook.com/DesignerNguyenHuyHieu/"><i class="fa fa-fw fa-facebook"></i> Fanpage</a>
+  <a href=""><i class="fa fa-fw fa-envelope"></i> HDesign@gmail.com</a>
+<div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+    </form>
+  </div>
+</div>
+  <div class="header"></div>
+		<div id="top-color-splash"></div>
+<body background=e.jpg>
+<div class="box">
+<img width="1348" height="140"src="ban.png" />
+</div>
+<div id="top-color-splash"></div>
+<div class="khoi-slide">
+   <div class="cac-slide">
+      <div class="slide active"><img src="11.png" ></div>
+      <div class="slide"><img src="12.png" ></div>
+      <div class="slide"><img src="13.jpg"></div>
+      <div class="slide"><img src="14.png" ></div>
+   </div>
+   <div class="nut-slide">
+      <span id="btn-prev"><i class="fas fa-chevron-left"></i></span>
+      <span id="btn-next"><i class="fas fa-chevron-right"></i></span>
+      <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+      </ul>
+   </div>
+</div>
+<div class="example2">
+<b><a>------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------</a></b>
+</div>
+<div class="normal-wrapper">
+<div class="box1">
+<img width="877" height="620"src="kt kn kn.png" />
+</div></div>
+<div id="top-color-splash"></div>
+<div class="box2">
+<div class="normal-wrapper">
+<div class="one-third">
+				<h2 class="no-margin-top">Công ty Thiết kế quảng cáo H-Design</h2>
+				<p><a href="">ThietkequangcaoHDesign.com</a> Chúng tôi sinh ra là để thiết kế quảng cáo. Với phương thức kinh doanh “Tận tụy với Khách Hàng, Tận tâm với công việc” là yếu tố quan trọng nhất được H-Design đặt
+làm phương thức kinh doanh, là nền tảng vững chắc để phát triển cao hơn, xa hơn và trên
+toàn Thế giới.</p>
+				<p>Cùng với một đội ngũ <a href="https://en.wikipedia.org/wiki/Designer">Designer</a> trẻ đầy nhiệt huyết, thông thạo phần mềm đồ họa,
+luôn tìm tòi học hỏi nỗ lực không ngừng và sự góp phần của các chuyên gia dày dặn kinh
+nghiệm trong lĩnh vực <a href="https://www.hotcourses.vn/study-abroad-info/study-guides/nganh-thiet-ke-do-hoa-moi-dieu-ban-can-biet/">Thiết kế đồ họa</a> đã phát triển tạo ra một phương thức thiết kế hoàn thiện đạt
+hiệu quả tối đa nhất để đảm bảo sự hoàn hảo của sản phẩm đạt tiêu chuẩn Quốc tế, tính bản
+quyền tuyệt đối, tương thích với mọi ngành nghề, thân thiện với các công cụ tìm kiếm,
+không hạn chế các yêu cầu, mở rộng dễ dàng, tốc độ thi công nhanh…Hội đủ các yếu tố để tạo nên một ấn phẩm <a href="https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_c%C3%A1o">quảng cáo</a> chuẩn tuyệt đối.</p>
+				<p>Tập trung tối đa, tận tình, tâm huyết vào mỗi sản phẩm của từng Khách hàng.</p>
+				<p>Công ty  thiết kế quảng cáo H-Design chân Thành cảm ơn Quý Khách Hàng đã
+quan tâm và ủng hộ Chúng tôi trong thời gian qua!</p>
+			</div>
+<div class="two-third">
+				<img id="f-image-1" class="featured-image" src="Image_1.png" />
+				<img id="f-image-2" class="featured-image hidden" src="Image_2.png" />
+				<img id="f-image-3" class="featured-image hidden" src="Image_3.png" />
+			</div>
+	</div>
+</div>
+<div class="box6"></div>
+
+<div class="normal-wrapper">
+<div class="box5"><h5>Một số dự án H-Design đã thực hiện</h5>
+</div></div>
+<div class="example5">
+<h2>ThietkequangcaoH-Design </h2>
+</div>
+			<div class="normal-wrapper">
+			<ul id="navbar">
+				<b>LOGO</b>
+			</ul></div>
+<ul id="navbar">
+<div class="box4">
+<img width="1024" height="355"src="1.png" />
+</div></ul>
+
+<div class="normal-wrapper">
+				<b>ẤN PHẨM VĂN PHÒNG</b>
+				</div>
+	<div class="box7">
+<img width="825" height="600"src="2.png" />
+</div>
+
+<div class="normal-wrapper">
+<ul id="navbar">
+				<b>SẢN PHẨM THI CÔNG THỰC TẾ</b>
+				</ul></div>
+	<ul id="navbar">			
+	<div class="box8">
+	<table> <tbody> <tr> <th>
+	<img src="4.png" width="500" alt="Thương hiệu KUMA"></th> 
+	<th><img src="5.png" width="500" alt="Thương hiệu Xíu Homespa">
+	</th> </tr> </tbody> </table> </div></ul>
+
+<div class="normal-wrapper">
+				<b>CÁC DỊCH VỤ KHÁC</b>
+				</div>
+<div class="box12">
+ <a href="file:///D:/Thiet%20ke%20giao%20dien%20web/my%20web/HDesign1.html"><img src="16.png" width="825" alt="dịch vụ khác"></a>
+ </div>
+<div class="normal-wrapper">
+<div class="box5"><h5>Bộ nhận diện thương hiệu bao gồm</h5>
+</div></div>
+<div class="normal-wrapper">
+<div class="box9">
+<p>Thiết kế bộ Nhận diện thương hiệu là yếu tố quan trọng và bắt buộc phải có đối với mỗi doanh nghiệp 
+để nhận biết được giá trị của mình trên thị trường kinh doanh. Với + 5000 khách hàng đã tin dùng dùng, 
++ 8000 dự án đã triển khai và kinh nghiệm + 10 năm trong lĩnh vực Thiết kế nhận diện thương hiệu, H-Design 
+tin tưởng mang đến cho doanh nghiệp nền tảng phát triển thương hiệu mạnh mẽ, chuyên nghiệp.</p>
+<a href="file:///D:/Thiet%20ke%20giao%20dien%20web/my%20web/HDesign3.html"><img src="28.png" width="877"></a>
+</div></div>
+<div class="normal-wrapper">
+<div class="box5"><h5>Một số mockup sản phẩm</h5>
+</div></div>
+<div class="box3">
+<div class="normal-wrapper">
+<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="18.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="20.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="19.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="21.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="22.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="18.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="20.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="19.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="21.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="22.png" style="width:100%">
+    </div>
+	
+	<!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="18.png" onclick="currentSlide(1)" alt="Nature">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="20.jpg" onclick="currentSlide(2)" alt="Snow">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="19.jpg" onclick="currentSlide(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="21.png" onclick="currentSlide(4)" alt="Lights">
+    </div>
+	
+	<div class="column">
+      <img class="demo" src="22.png" onclick="currentSlide(5)" alt="Lights">
+    </div>
+  </div>
+</div></div></div>
+<div class="normal-wrapper">
+<div class="box5"><h5>Dựng và biên tập video chuyên nghiệp</h5>
+</div></div>
+
+<div class="box13">
+<table> <tbody> <tr> <th>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cFAp3ncdUVI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</th> <th><img src="26.jpg" height="315"></th></tr> </tbody> </table>
+</div></div>
+<div class="box10">
+<div class="normal-wrapper">
+<table> <tbody> <tr> <th>
+	<img src="7.png" width="320"><br><h2>Đảm bảo tiến độ</h2></th> 
+	<th><img src="8.png" width="320"><br><h2>Miễn phí tư vấn 100%</h2>
+	</th> <th><img src="9.png" width="320"><br><h2>Không giới hạn số lần chỉnh sửa</h2></th>
+	<th><img src="10.png" width="320"><br><h2>Hỗ trợ tận tình</h2></th>
+	</tr> </tbody> </table></div></div>
+<div class="normal-wrapper">
+<ul id="navbar">
+				<a href="https://www.youtube.com/channel/UCcuMftbgewjhmEP8n7MK3hQ?view_as=subscriber">
+			<div class="icon-outer">
+				<div class="icon-circle">
+					<i class="fa fa-youtube"></i>
+					</a>
+				</div>
+				<h5>YouTube</h5>
+				<p>Đăng ký kênh YouTube của H-Design để xem nhiều clip hay về design hơn!</p>
+			</div>
+
+<a href="https://www.facebook.com/pg/DesignerNguyenHuyHieu/photos/?tab=albums&ref=page_internal">
+			<div class="icon-outer">
+				<div class="icon-circle">
+					<i class="fa fa-camera-retro"></i>
+					</a>
+				</div>
+				<h5>Reviews</h5>
+				<p>Xem qua các sản phẩm của H-Design tại đây.</p>
+			</div>
+
+<a href="https://www.facebook.com/pg/DesignerNguyenHuyHieu/services/?ref=page_internal">
+			<div class="icon-outer">
+				<div class="icon-circle">
+					<i class="fa fa-dollar"></i>
+					</a>
+				</div>
+				<h5>Buying Guides</h5>
+				<p>Hướng dẫn các bước để khách hàng đặt thiết kế.</p>
+			</div>
+		</div>
+<div id="quote-area">
+			<div class="normal-wrapper">
+				<h3>“Create brand, create trust”</h3>
+				<h4>H-Design</h4>
+			</div>
+		</div>
+	<div class="example2">
+<b><a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599  <a>H-Design</a>  0966443599</b>
+</div>
+<div class="hotline-phone-ring-wrap">
+	<div class="hotline-phone-ring">
+		<div class="hotline-phone-ring-circle"></div>
+		<div class="hotline-phone-ring-circle-fill"></div>
+		<div class="hotline-phone-ring-img-circle">
+		<a href="tel:0966443599" class="pps-btn-img">
+			<img src="https://nguyenhung.net/wp-content/uploads/2019/05/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+		</a>
+		</div>
+	</div>
+	<div class="hotline-bar">
+		<a href="tel:0966443599">
+			<span class="text-hotline">Gọi H-Design</span>
+		</a>
+	</div>
+</div>
+<div class="normal-wrapper">
+<div class="box11">
+<div id="map" style="width:500px;height:500px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
+    1d3723.8977453149246!2d105.83245751424809!3d21.036777085994046!
+    2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+    1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgSOG7kyBDaMOtIE1pbmg!
+    5e0!3m2!1svi!2sus!4v1501056274257" width="600" height="500"
+    frameborder="0" style="border:0" allowfullscreen></iframe>
+</div></div></div>
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+<script>
+$(document).ready(function() {
+   $('#btn-next').click(function(event) {
+      var slide_sau = $('.active').next();
+      if(slide_sau.length!=0){
+         $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+            $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+         });
+         slide_sau.addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+            $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+         });
+      }else{
+         $('.active').addClass('bien-mat-ben-trai').one('webkitAnimationEnd', function(event) {
+            $('.bien-mat-ben-trai').removeClass('bien-mat-ben-trai').removeClass('active');
+         });
+         $('.slide:first-child').addClass('active').addClass('di-vao-ben-phai').one('webkitAnimationEnd', function(event) {
+            $('.di-vao-ben-phai').removeClass('di-vao-ben-phai');
+         });
+      }
+   });
+});
+</script>
+		<div id="footer"></div>
+
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			/* JavaScript goes here, at the bottom of the page */
+			$(document).ready(function() {
+			    // run once the page is ready
+			    var time = 2500;
+			    // get the image containers
+			    $im1 = $('#f-image-1');
+			    $im2 = $('#f-image-2');
+			    $im3 = $('#f-image-3');
+
+			    setInterval(function(){
+			    	// call function every x milliseconds (defined in time variable above)
+			    	changeImage();
+			    }, time);
+
+			    var currentImage = 1;
+
+			    function changeImage(){
+			    	switch(currentImage) {
+					    case 1:
+					        // show image 2
+					    	$im1.hide();
+					    	$im2.show();
+					    	$im3.hide();
+					        currentImage = 2;
+					        break;
+					    case 2:
+					    	// show image 3
+					    	$im1.hide();
+					    	$im2.hide();
+					    	$im3.show();
+					        currentImage = 3;
+					        break;
+					    default:
+					   	    // show image 1
+					    	$im1.show();
+					    	$im2.hide();
+					    	$im3.hide();
+					        currentImage = 1;
+					}
+			    }
+			});
+		</script>
+</BODY>
+</HTML>
